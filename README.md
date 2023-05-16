@@ -31,7 +31,7 @@ You can refer to the javascript file to access the code for this project.
 
 To view the actual webpage please refer to the following url link.
 
-https://shathev002.github.io/Portfolio/
+https://shathev002.github.io/Password-Generator/
 
 You can also refer to the screenshot below. 
 
