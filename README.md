@@ -35,7 +35,7 @@ https://shathev002.github.io/Portfolio/
 
 You can also refer to the screenshot below. 
 
-![alt text](./assets/03-javascript-homework-demo.png)
+![alt text](Assets/03-javascript-homework-demo.png)
 
 ## Credits
 
