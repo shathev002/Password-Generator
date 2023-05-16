@@ -1,4 +1,4 @@
-//variables set for length of password, selection criteria, uppcase, lowercase, number and special characters.
+//variables set for length of password, selection based on criteria, and the criteria (uppcase, lowercase, number and special characters).
 var length = '';
 var selection = [];
 var upperCase = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
@@ -16,63 +16,65 @@ function writePassword() {
   var prompts =  showPrompt(); 
   var passwordText = document.querySelector("#password");
 
-// will be true or false if follow the steps correctly and move on to generate password if true 
-  if(prompts) {
+    // will be true or false if follow the steps correctly and move on to generate password if true 
+    if(prompts) {
     var finalpassword = generatePassword();
     passwordText.value = finalpassword;
 
-  } else {
+    } else {
     passwordText.value=""; // if don't follow prompts correctly password will be blank
 
-  }
+    }
 
- }
+}
 
 
-
+//variables set for the password chosen and calculation of the length of password using the Math.random function. 
+//Defined function here using for loop to create a random password using Math.random function
 function generatePassword() {
- var password = '';
- for(var i = 0; i < length; i++) {
+  var password = '';
+  for(var i = 0; i < length; i++) {
   var randomkey = Math.floor(Math.random() * selection.length); //use Math.floor to convert calculation into a whole number 
   password = password + selection[randomkey];
 
- }
+  }
 
-  return password;
+return password;
 }
 
-
+// Defined function here using if statements to get the user to choose selection criteria which will be used to create password
+// use parseInt to convert into a string and then get an integer to calculate length of password
 function showPrompt() {
   selection = [];
-// use parseInt to convert into a string and then get an integer to calculate length of password
+
   length = parseInt(prompt("How many characters would you like your password to be? Must be between 8 and 128 characters"));
 
-  if(length < 8 || length > 128) {
+    if(length < 8 || length > 128) {
     alert("Password must be between 8 and 128 characters. Please try again");  // To check if meet length condition first before other criteria
     return false;
-  }
-  if(confirm("Would you like your password to have lowercase letters?")) {
+    }
+    if(confirm("Would you like your password to have lowercase letters?")) {
     selection = selection.concat(lowerCase); //used concat to combine strings
 
-  }
+    }
 
-  if(confirm("Would you like your password to have uppercase letters?")) {
-    selection = selection.concat(upperCase);
+    if(confirm("Would you like your password to have uppercase letters?")) {
+    selection = selection.concat(upperCase); //used concat to combine strings
 
-  }
-  if(confirm("Would you like your password to have special characters?")) {
-    selection = selection.concat(special);
+    }
+    if(confirm("Would you like your password to have special characters?")) {
+    selection = selection.concat(special); //used concat to combine strings
 
-  }
-  if(confirm("Would you like your password to have numbers?")) {
-    selection = selection.concat(number);
+    }
+    if(confirm("Would you like your password to have numbers?")) {
+    selection = selection.concat(number); //used concat to combine strings
 
-  }
-  return true;
-  
+    }
+return true;
+
 }
 
-showPrompt();
+
 
 
 // Add event listener to generate button

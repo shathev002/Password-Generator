@@ -15,7 +15,9 @@ Once length is confirmed, other criteria will be shown and a final password will
 
 Applied all the javascript skills learned this week to create functions that generate a password. 
 
-Learned how to use if statements and for loops to create conditions that will stop the process or complete it and return a value, in this case a password. 
+Learned how to use if statements and for loops to create conditions that will stop the process or complete it and return a value, 
+
+which in this case was a password. 
 
 
 
@@ -33,11 +35,11 @@ https://shathev002.github.io/Portfolio/
 
 You can also refer to the screenshot below. 
 
-![alt text](./assets/web%20page%20screenshot.png)
+![alt text](./assets/03-javascript-homework-demo.png)
 
 ## Credits
 
-https://www.w3schools.com/ was used for reference regarding CSS and HTML topics. 
+https://www.w3schools.com/ was used for reference regarding JavaScipt topics. 
 
 ## License
 
